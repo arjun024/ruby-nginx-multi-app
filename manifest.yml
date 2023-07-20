@@ -1,0 +1,9 @@
+---
+applications:
+- name: app1
+  buildpacks:
+    - ruby_buildpack
+    - nginx_buildpack
+  env:
+    FEELING: happy
+  stack: cflinuxfs4

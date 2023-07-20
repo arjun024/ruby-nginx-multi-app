@@ -1,0 +1,16 @@
+events {}
+
+http {
+  access_log stdout;
+  server {
+  listen <%= ENV['PORT'] %>;
+
+    location / {
+    <% if ENV['FEELING'] == "happy" %>
+        return 200 'happy happy world!';
+    <% else %>
+        return 200 'nooooooooo!';
+    <% end %>
+    }
+  }
+}
