@@ -3,7 +3,7 @@ events {}
 http {
   access_log stdout;
   server {
-  listen <%= ENV['PORT'] %>;
+  listen {{port}};
 
     location / {
     <% if ENV['FEELING'] == "happy" %>
